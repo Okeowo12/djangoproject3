@@ -1,0 +1,31 @@
+{% extends 'crudapp/base.html' %}
+{% load static%}
+{% block title %} {{ section.title }} {% endblock %}
+
+{% block content %}
+
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Customer Name</th>
+        
+
+        
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for list in customer %}  
+    <tr>  
+        <td>{{ order.customer }}</td>   
+        
+        <td>  
+            <a href="/customerorder/{{ customer.customer }}"><span class="glyphicon glyphicon-pencil" >Show All Orders</span></a>  
+            
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+
+
+{% endblock %}

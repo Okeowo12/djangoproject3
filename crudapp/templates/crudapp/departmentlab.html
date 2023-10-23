@@ -1,0 +1,38 @@
+{% extends 'crudapp/base.html' %}
+{% load static%}
+{% block title %} {{ section.title }} {% endblock %}
+
+{% block content %}
+
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Department Title</th>  
+        <th>Category</th>  
+        <th>Approved date</th>  
+        <th>Start date</th>  
+        <th>End date</th> 
+         <th>Employee</th>
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for department in departments %}  
+    <tr>  
+        <td>{{ department.departmenttitle }}</td>  
+        <td>{{ department.category }}</td>  
+        <td>{{ department.approveddate }}</td>  
+        <td>{{ department.startdate }}</td> 
+         <td>{{ department.enddate }}</td>
+         <td>{{ department.employee }}</td>
+        <td>  
+            
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+
+
+{% endblock %}
